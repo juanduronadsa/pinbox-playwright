@@ -1,0 +1,26 @@
+﻿[
+  {
+    "casoId": "QA-LGN-01",
+    "usuario": "jose.lara",
+    "password": "P1nB0x",
+    "debeSerExitoso": true,
+    "mensajeEsperado": "",
+    "agenteEsperado": "Lara Martinez, Jose Antonio"
+  },
+  {
+    "casoId": "QA-LGN-02",
+    "usuario": "tito.martinez",
+    "password": "ClaveFalsaSuperMala123",
+    "debeSerExitoso": false,
+    "mensajeEsperado": "La contraseña es incorrecta.",
+    "agenteEsperado": ""
+  },
+  {
+    "casoId": "QA-LGN-03",
+    "usuario": "josevillalba",
+    "password": "P1nB0x",
+    "debeSerExitoso": false,
+    "mensajeEsperado": "No es un usuario autorizado.",
+    "agenteEsperado": ""
+  }
+]

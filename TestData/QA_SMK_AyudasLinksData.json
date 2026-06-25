@@ -1,0 +1,79 @@
+﻿[
+  {
+    "id": "QA-SMK-04.1",
+    "textoEnlace": "AppPinbox",
+    "selectorValidacion": "role=heading[name='Aplicación Android PINBOX']",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.2",
+    "textoEnlace": "Glosario",
+    "selectorValidacion": "role=heading[name='Glosario']",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.3",
+    "textoEnlace": "Herramientas",
+    "selectorValidacion": "text='Para el funcionamiento de las'",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.4",
+    "textoEnlace": "Infografías",
+    "selectorValidacion": "role=heading[name='Infografías']",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.5",
+    "textoEnlace": "Mapa mental",
+    "selectorValidacion": "img",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.6",
+    "textoEnlace": "Notiventas",
+    "selectorValidacion": "role=heading[name='Notiventas']",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.7",
+    "textoEnlace": "Performance",
+    "selectorValidacion": "text='PERFORMANCE DE TRÁFICO EN'",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.8",
+    "textoEnlace": "Preparador digital",
+    "selectorValidacion": "role=heading[name='Preparador Digital']",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.9",
+    "textoEnlace": "Proceso de ventas",
+    "selectorValidacion": "role=heading[name='Proceso de ventas']",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.10",
+    "textoEnlace": "Productos",
+    "selectorValidacion": "text='Ejemplos ADN'",
+    "habilitado": true,
+    "esExterno": false
+  },
+  {
+    "id": "QA-SMK-04.11",
+    "textoEnlace": "Velocidad de páginas",
+    "selectorValidacion": "n/a",
+    "habilitado": true,
+    "esExterno": true
+  }
+]

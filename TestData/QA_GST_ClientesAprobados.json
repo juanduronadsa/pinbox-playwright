@@ -1,0 +1,189 @@
+﻿[
+  {
+    "nombre": "FARMASUN",
+    "idCliente": "208883344",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "BENITO JUAREZ",
+    "categoria": "FARMACIAS",
+    "usuarioPropietario": "mariana.achotegui",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "TECHYLAM",
+    "idCliente": "200026939",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "BENITO JUAREZ",
+    "categoria": "TECNOLOGIA",
+    "usuarioPropietario": "mariana.achotegui",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "MONTACARGAS DISMARAKI",
+    "idCliente": "208875400",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "BENITO JUAREZ",
+    "categoria": "MAQUINARIA",
+    "usuarioPropietario": "mariana.achotegui",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "R2 CONTROL DE PLAGAS",
+    "idCliente": "208108213",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "BENITO JUAREZ",
+    "categoria": "FUMIGACIONES",
+    "usuarioPropietario": "mariana.achotegui",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "LALAMOVE",
+    "idCliente": "113873640",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "COYOACAN",
+    "categoria": "MUDANZAS",
+    "usuarioPropietario": "jose.lara",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "GRUPO HOSTO",
+    "idCliente": "205932795",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "COYOACAN",
+    "categoria": "CONSULTORES",
+    "usuarioPropietario": "jose.lara",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "DSTEC GPS",
+    "idCliente": "208881495",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "COYOACAN",
+    "categoria": "TECNOLOGIA",
+    "usuarioPropietario": "jose.lara",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "GURZA",
+    "idCliente": "101293063",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "COYOACAN",
+    "categoria": "COMERCIALIZADORAS",
+    "usuarioPropietario": "jose.lara",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "MUDANZAS AJUSCO",
+    "idCliente": "114217864",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "TLALPAN",
+    "categoria": "MUDANZAS",
+    "usuarioPropietario": "nallely.davila",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "LA NAVAL",
+    "idCliente": "109275750",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "TLALPAN",
+    "categoria": "ABARROTES-ALMACENES Y TIENDAS DE",
+    "usuarioPropietario": "nallely.davila",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "CONSTRU-EQUIP",
+    "idCliente": "102218995",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "TLALPAN",
+    "categoria": "MATERIALES DE CONSTRUCCION",
+    "usuarioPropietario": "nallely.davila",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "RECICLATE",
+    "idCliente": "113489746",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "TLALPAN",
+    "categoria": "ECOLOGIA",
+    "usuarioPropietario": "nallely.davila",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "PROLOMER SEGUROS",
+    "idCliente": "201600471",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "MIGUEL HIDALGO",
+    "categoria": "SEGUROS",
+    "usuarioPropietario": "mauricio.franco",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "MARIACHI LOS PALMEROS",
+    "idCliente": "201719751",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "MIGUEL HIDALGO",
+    "categoria": "MUSICA",
+    "usuarioPropietario": "mauricio.franco",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "PUBLICIDAD GB",
+    "idCliente": "208873237",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "MIGUEL HIDALGO",
+    "categoria": "PUBLICIDAD",
+    "usuarioPropietario": "mauricio.franco",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "IIEM SA DE CV",
+    "idCliente": "115676270",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "MIGUEL HIDALGO",
+    "categoria": "SERVICIOS",
+    "usuarioPropietario": "mauricio.franco",
+    "passwordPropietario": "P1nB0x"
+  },
+  {
+    "nombre": "VALVULANDIA",
+    "idCliente": "102071830",
+    "telefono": "5542284164",
+    "correo": "delfinbeto99@gmail.com",
+    "estado": "Distrito Federal",
+    "municipio": "MIGUEL HIDALGO",
+    "categoria": "VALVULAS",
+    "usuarioPropietario": "mauricio.franco",
+    "passwordPropietario": "P1nB0x"
+  }
+]

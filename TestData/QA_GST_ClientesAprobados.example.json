@@ -1,0 +1,23 @@
+﻿[
+  {
+    "_meta_comentario": "--- PLANTILLA DE EJEMPLO PARA ROUND-ROBIN ---",
+    "idCliente": "000000000",
+    "telefono": "5500000000",
+    "correo": "ejemplo@dominio.com",
+    "estado": "Distrito Federal",
+    "municipio": "Delegacion Ejemplo",
+    "categoria": "RAD",
+    "usuarioPropietario": "nombre.apellido",
+    "passwordPropietario": "Password123"
+  },
+  {
+    "idCliente": "111111111",
+    "telefono": "5511111111",
+    "correo": "test@dominio.com",
+    "estado": "Estado de México",
+    "municipio": "Municipio Ejemplo",
+    "categoria": "DIG",
+    "usuarioPropietario": "agente.dos",
+    "passwordPropietario": "Password456"
+  }
+]

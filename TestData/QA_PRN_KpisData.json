@@ -1,0 +1,62 @@
+﻿[
+  {
+    "casoId": "QA-PRN-01",
+    "boton": "Contratos en OLBC",
+    "tituloEsperado": "OLBC",
+    "esId": false
+  },
+  {
+    "casoId": "QA-PRN-02",
+    "boton": "Contratos rechazados",
+    "tituloEsperado": "Rechazos",
+    "esId": false
+  },
+  {
+    "casoId": "QA-PRN-03",
+    "boton": "Contratos en revisión",
+    "tituloEsperado": "Revisión",
+    "esId": false
+  },
+  {
+    "casoId": "QA-PRN-04",
+    "boton": "Contratos en ingreso",
+    "tituloEsperado": "Ingreso",
+    "esId": false
+  },
+  {
+    "casoId": "QA-PRN-05",
+    "boton": "Estación IC",
+    "tituloEsperado": "Contratos en IC",
+    "esId": false
+  },
+  {
+    "casoId": "QA-PRN-06",
+    "boton": "Contratos en fulfillment",
+    "tituloEsperado": "Fulfillment",
+    "esId": false
+  },
+  {
+    "casoId": "QA-PRN-07",
+    "boton": "Contratos publicados",
+    "tituloEsperado": "Publicadas",
+    "esId": false
+  },
+  {
+    "casoId": "QA-PRN-08",
+    "boton": "#atencionProd",
+    "tituloEsperado": "Casos",
+    "esId": true
+  },
+  {
+    "casoId": "QA-PRN-09",
+    "boton": "Al día",
+    "tituloEsperado": "Contratos al día",
+    "esId": false
+  },
+  {
+    "casoId": "QA-PRN-10",
+    "boton": "Cambios y correcciones",
+    "tituloEsperado": "Cambios y correcciones",
+    "esId": false
+  }
+]

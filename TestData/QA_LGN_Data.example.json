@@ -1,0 +1,19 @@
+﻿[
+  {
+    "_meta_comentario": "Renombra a QA_LGN_Data.json. Agrega aquí los usuarios reales de prueba.",
+    "casoId": "QA-LGN-01",
+    "usuario": "usuario.valido",
+    "password": "PasswordReal123",
+    "debeSerExitoso": true,
+    "MensajeEsperado": "",
+    "agenteEsperado": "Apellido, Nombre"
+  },
+  {
+    "casoId": "QA-LGN-02",
+    "usuario": "usuario.invalido",
+    "password": "ClaveFalsa",
+    "debeSerExitoso": false,
+    "MensajeEsperado": "La contraseña es incorrecta.",
+    "agenteEsperado": ""
+  }
+]

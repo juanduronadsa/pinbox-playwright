@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Id": "QA-SMK-DASH-01",
+    "TextoEnlace": "Comisiones por resultados",
+    "SelectorValidacion": "h1:has-text('Reporte de comisiones por')",
+    "Habilitado": true
+  },
+  {
+    "Id": "QA-SMK-DASH-02",
+    "TextoEnlace": "Comisiones",
+    "SelectorValidacion": "h1:has-text('Comisiones')",
+    "Habilitado": true
+  },
+  {
+    "Id": "QA-SMK-DASH-03",
+    "TextoEnlace": "Tablero",
+    "SelectorValidacion": "h1:has-text('Tablero')",
+    "Habilitado": true
+  },
+  {
+    "Id": "QA-SMK-DASH-04",
+    "TextoEnlace": "Valida dominio",
+    "SelectorValidacion": "h1:has-text('Validar Dominio')",
+    "Habilitado": true
+  },
+  {
+    "Id": "QA-SMK-DASH-05",
+    "TextoEnlace": "¿Cuánto falta para mis",
+    "SelectorValidacion": "h1:has-text('¿Cuánto falta para mis')",
+    "Habilitado": true
+  }
+]

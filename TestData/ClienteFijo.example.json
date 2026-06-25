@@ -1,0 +1,10 @@
+﻿{
+  "_meta_comentario": "Renombra a ClienteFijo.json. Coloca aquí datos fiscales reales para que el sistema no marque error de SAT.",
+  "CurpFija": "XXXX999999XXXXXX00",
+  "RfcFijo": "XAXX010101000",
+  "RfcMoralFijo": "XXX010101XX0",
+  "EmailFacturacion": "facturacion.qa@dominio.com",
+  "EmailContacto": "contacto.qa@dominio.com",
+  "TelefonoFijo": "5500000000",
+  "CelularFijo": "5500000000"
+}

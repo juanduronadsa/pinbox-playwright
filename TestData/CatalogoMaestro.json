@@ -1,0 +1,618 @@
+﻿[
+  {
+    "producto": "ADN PRO",
+    "codigo": "SAADNPRO",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "ADN Plus",
+    "codigo": "ADNDIFYXT",
+    "periodos_validos": [
+      "1 mes",
+      "12 mes",
+      "12 meses",
+      "3 mes",
+      "3 meses",
+      "6 mes",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "ADN Plus Pro",
+    "codigo": "SAADNPOOB",
+    "periodos_validos": [
+      "1 a 12 meses"
+    ],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "BLOG ADN",
+    "codigo": "ADNBLOG",
+    "periodos_validos": [
+      "1 mes"
+    ],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "BRONCE PLUS (SACOM)",
+    "codigo": "SABROPL",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Banner CPM",
+    "codigo": "SABANCPM",
+    "periodos_validos": [
+      "1 a 12 meses"
+    ],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Banner Categoria Nacional SACOM",
+    "codigo": "SABCINNAL",
+    "periodos_validos": [
+      "12 meses"
+    ],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Banner Categoria Regional SACOM",
+    "codigo": "SABCINREG",
+    "periodos_validos": [
+      "12 meses"
+    ],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Correo Smart Adicional",
+    "codigo": "SAEMAILAD",
+    "periodos_validos": [
+      "12meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "DIAMANTE (SACOM)",
+    "codigo": "SADIA",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Digitalizado Plus",
+    "codigo": "SAPLANC",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Digitalizado Pro",
+    "codigo": "SAPLANB",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Digitalizado lite",
+    "codigo": "SAPLAND",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Dominio Smart para SUSTITUCION",
+    "codigo": "SADOMSU",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Dominio venta independiente",
+    "codigo": "SADOMEXT",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Facebook Ads  ABONO SACOM",
+    "codigo": "ADSOCIALAB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Facebook Ads (campanas en redes sociales)",
+    "codigo": "ADSOCIAL",
+    "periodos_validos": [
+      "1 a 12 meses",
+      "12 meses",
+      "3 a 12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Facebook CARSO",
+    "codigo": "ADFACEBCRS",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Go Banner Abono",
+    "codigo": "ADGOBANAB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Go Banner Display",
+    "codigo": "ADGOBANDIS",
+    "periodos_validos": [
+      "1 a 12 meses",
+      "1 mes",
+      "12 meses",
+      "3 a 12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Lead Brand AD Generico",
+    "codigo": "ADLEADBGEN",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Lead Brand Ley de transparencia",
+    "codigo": "SALEADLEYT",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Listado ADN PLUS PRO",
+    "codigo": "SALISTAPRO",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Listado ADN PRO",
+    "codigo": "SALISADNPR",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses",
+      "6 meses",
+      "9 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Listado ADN Plus",
+    "codigo": "SALISTDIF",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Listado Adicional tipo BRONCE (SACOM)",
+    "codigo": "SALABRO",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Listado Adicional tipo DIAMANTE (SACOM)",
+    "codigo": "SALADIA",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Listado Adicional tipo LPT (SACOM)",
+    "codigo": "SALALPT",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Listado Adicional tipo PLATA(SACOM)",
+    "codigo": "SALAPLA",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "MM BRONCE NE",
+    "codigo": "MMBRO",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "MM DIAMANTE NE",
+    "codigo": "MMDIA",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "MM PLATA NE",
+    "codigo": "MMPLA",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Medio Facebook",
+    "codigo": "CTACAMPFB",
+    "periodos_validos": [
+      "1 a 12 meses"
+    ],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Medio Google Adwords",
+    "codigo": "CTACAMPADW",
+    "periodos_validos": [
+      "1 a 12 meses"
+    ],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Medio Twitter",
+    "codigo": "CTACAMPTWI",
+    "periodos_validos": [
+      "1 a 12 meses"
+    ],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Monitoreo de llamadas Digital SACOM",
+    "codigo": "SAMDLDIG",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Monitoreo de llamadas Digital estrategia SACOM",
+    "codigo": "SAMDLDIGES",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "OOB - Servicios de estrategia VIDEO (SACOM)",
+    "codigo": "SAOOBVDO",
+    "periodos_validos": [],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "OOB - Servicios de estrategia(SACOM)",
+    "codigo": "SAOOB",
+    "periodos_validos": [
+      "1 a 12 meses",
+      "13 a 36 meses"
+    ],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Online",
+    "codigo": "SAPLANF",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Online ADN",
+    "codigo": "SAPLANE",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Online PA",
+    "codigo": "SAPLANFPA",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "PLATA (SACOM)",
+    "codigo": "SAPLA",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Paquete Presencia Web(SACOM)",
+    "codigo": "PAQPWEB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Paquete digital TELMEX (SACOM)",
+    "codigo": "SADIGTELMX",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "RPIP (SA.com)",
+    "codigo": "SARPIP",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "SA Maxi Clicks",
+    "codigo": "SAMAXCLICK",
+    "periodos_validos": [
+      "1 a 12 meses",
+      "12 meses",
+      "3 a 12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "SA Maxi Clicks Abono",
+    "codigo": "SAMAXCLIAB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "SA Maxi Clicks VIP",
+    "codigo": "SAMAXCLIVP",
+    "periodos_validos": [
+      "1 a 12 meses",
+      "12 meses",
+      "3 a 12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "SA Maxi Clicks VIP Abono",
+    "codigo": "SAMAXVIPAB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "SA MaxiClick CARSO",
+    "codigo": "SAMAXCLCRS",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "SA MaxiClick corporativo",
+    "codigo": "SAMAXCLCRP",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "SA Servicio",
+    "codigo": "SASERVICIO",
+    "periodos_validos": [
+      "1 a 12 meses"
+    ],
+    "suscripciones_validas": [
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "SMS",
+    "codigo": "SMS",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "SMS Menumania",
+    "codigo": "MMSMS",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio ADN",
+    "codigo": "SATIENWEB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio ADN (SACOM)",
+    "codigo": "SAPAGADN",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio ADN Basico (SACOM)",
+    "codigo": "SAINIADN",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio ADN PA",
+    "codigo": "SAADNPA",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio ADN PA Impulsa",
+    "codigo": "SAADNPAIMP",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio ADN con Oferta",
+    "codigo": "SAOFPROWEB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio ADN con Oferta de Servicio",
+    "codigo": "SAOFSERWEB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio ADN con Tienda en línea (DIY)",
+    "codigo": "SATIENDIY",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio Duda con tienda",
+    "codigo": "SATIENDUD",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio dummy pruebas sistemas",
+    "codigo": "SATIENDUMM",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Sitio servicios de estrategia",
+    "codigo": "SATIENOOB",
+    "periodos_validos": [],
+    "suscripciones_validas": []
+  },
+  {
+    "producto": "Social Content",
+    "codigo": "SASOCONT",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses",
+      "3 meses",
+      "6 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Staff adicional (1 a 4) CRM",
+    "codigo": "SASTAFFAD1",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  },
+  {
+    "producto": "Staff adicional ilimitado CRM",
+    "codigo": "SASTAFFILI",
+    "periodos_validos": [
+      "1 mes",
+      "12 meses"
+    ],
+    "suscripciones_validas": [
+      "Con suscripción",
+      "Sin suscripción"
+    ]
+  }
+]
