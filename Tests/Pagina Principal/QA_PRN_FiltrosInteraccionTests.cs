@@ -33,7 +33,7 @@ public class QA_PRN_FiltrosInteraccionTests : BaseTest
 
         foreach (var pestana in pestanas)
         {
-            var selector = Page.GetByRole(AriaRole.Link, new() { Name = pestana, Exact = true });
+            var selector = Page.GetByRole(AriaRole.Link, new() { Name = pestana });
             await ClickConMonitoreo(selector, $"Pestaña {pestana}");
             
             // Verificamos que el contenedor general se mantenga estable en el DOM

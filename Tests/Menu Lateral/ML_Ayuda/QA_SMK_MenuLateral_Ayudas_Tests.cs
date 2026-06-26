@@ -47,23 +47,41 @@ public class QA_SMK_MenuLateral_Ayudas_Tests : BaseTest
     public async Task QA_SMK_04_Barredor_Ayudas_Dinamico(LinkTestData datos)
     {
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" }), "Apertura Menú");
+        
         var opcionMenu = Page.Locator($"a:has-text('{datos.TextoEnlace}')").First;
+
+        // ====================================================================
+        // 🛡️ NUEVA LÓGICA: Desplegar el acordeón padre si la opción está oculta
+        // ====================================================================
+        if (!await opcionMenu.IsVisibleAsync())
+        {
+            LogWriter("El enlace está oculto en el acordeón. Abriendo categoría 'Ayudas'...");
+            
+            // Buscamos el elemento padre "Ayudas" y le damos clic para desplegarlo
+            // Nota: Si "Ayudas" es un botón o tiene otra clase, puedes ajustar este selector
+            await Page.GetByText("Ayudas", new() { Exact = true }).First.ClickAsync();
+            
+            // Espera breve para permitir que la animación CSS termine de bajar el submenú
+            await Task.Delay(1000); 
+        }
+        // ====================================================================
 
         // Lógica de bifurcación: Manejo de Popups Externos vs Ruteo Interno
         if (datos.EsExterno)
         {
             LogWriter($"Interceptando evento de nueva pestaña (Target='_blank') para {datos.TextoEnlace}");
             var popup = await Page.RunAndWaitForPopupAsync(async () => {
-                // 🚨 Clic forzado para atravesar el menú colapsado y la animación
-                await opcionMenu.ClickAsync(new() { Force = true });
+                // Clic natural, ya sin Force=true porque el elemento es visible
+                await opcionMenu.ClickAsync();
             });
             await popup.CloseAsync();
         }
         else
         {
             LogWriter($"Navegación Interna {datos.TextoEnlace}");
-            // 🚨 Clic forzado para atravesar el menú colapsado y la animación
-            await opcionMenu.ClickAsync(new() { Force = true });
+            
+            // Clic natural, ya sin Force=true porque el elemento es visible
+            await opcionMenu.ClickAsync();
             
             await Expect(Page.Locator(datos.SelectorValidacion).First).ToBeVisibleAsync();
 
