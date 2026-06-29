@@ -10,6 +10,12 @@ namespace Playwrigt_Demo.Tests.Menu_Lateral.ML_Dashboard.ML_Dashboard_BonoSinerg
 [Category("Funcional")]
 public class QA_SNG_BonoSinergia_Tests : BaseTest
 {
+    [SetUp]
+    public async Task ConfiguracionInicial()
+    {
+        await LoginDinamico();
+        await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
+    }
     [Test]
     [Ignore("TICKET-POR-REPORTAR: El entorno de pruebas devuelve Error 500 (The view 'bonosinergia' was not found).")]
     public async Task QA_SNG_ValidacionBonoSinergia()

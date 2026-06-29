@@ -9,6 +9,12 @@ namespace Playwrigt_Demo.Tests.Menu_Lateral.ML_Ayudas.ML_Ayudas_Infografias;
 [Category("Ayudas"), Category("Funcional")]
 public class QA_AYD_InfografiasTests : BaseTest
 {
+    [SetUp]
+    public async Task ConfiguracionInicial()
+    {
+        await LoginDinamico();
+        await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
+    }
     [Test]
     public async Task QA_AYD_FiltroYVisualizacionInfografias()
     {

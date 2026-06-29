@@ -247,25 +247,13 @@ await Page.AddLocatorHandlerAsync(
         await Page.GetByRole(AriaRole.Button, new() { Name = "ENTRAR" }).ClickAsync();
         await Expect(Page.Locator("#divLoading")).ToBeHiddenAsync(new LocatorAssertionsToBeHiddenOptions { Timeout = 15000 });
         await Page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
-        // BARRERA ANTI-MODALES: Destruimos cualquier SweetAlert que aparezca sorpresivamente
-        var swalContainer = Page.Locator(".swal2-container");
-        var btnAceptarSwal = Page.Locator(".swal2-confirm"); // Clase por defecto del botón OK en SweetAlert2
-        // Le damos una ventana de 3 segundos por si el modal se anima tarde
-        try 
-        {
-            await swalContainer.WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Visible, Timeout = 3000 });
-            if (await swalContainer.IsVisibleAsync())
-            {
-                LogWriter("Modal de SweetAlert detectado. Forzando cierre...");
-                await btnAceptarSwal.ClickAsync(new LocatorClickOptions { Force = true });
-                await swalContainer.WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Hidden, Timeout = 5000 });
-            }
-        } 
-        catch (TimeoutException) 
-        {
-            // Si no aparece el modal en 3 segundos, todo está limpio. Continuamos.
-        }
-        // Ahora sí, verificamos el botón del menú
+        
+        // Nota: el cierre de SweetAlerts inesperados (Dashboard, Sinergias, Cotizador, etc.)
+        // ya lo gestionan los AddLocatorHandlerAsync registrados en SetupGlobal. Verificarlos
+        // de nuevo aquí "a mano" con .swal2-confirm es peligroso: en modales de 2 botones
+        // (ej. "Recargar" / "Continuar navegando.") esa clase no siempre apunta al botón que
+        // queremos, y choca con el handler global, dejando la prueba esperando un botón que
+        // ya no existe. Verificamos directamente el destino final del login.
         var menuOpenButton = Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" });
         await Expect(menuOpenButton).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions { Timeout = 15000 });
         LogWriter("Login exitoso y Dashboard verificado.");

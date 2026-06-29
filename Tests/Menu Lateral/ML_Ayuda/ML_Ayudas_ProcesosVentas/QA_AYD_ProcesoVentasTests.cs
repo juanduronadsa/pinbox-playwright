@@ -10,6 +10,12 @@ namespace Playwrigt_Demo.Tests.Menu_Lateral.ML_Ayuda.ML_Ayudas_ProcesosVentas;
 [Category("Funcional")]
 public class QA_AYD_ProcesoVentasTests : BaseTest
 {
+    [SetUp]
+    public async Task ConfiguracionInicial()
+    {
+        await LoginDinamico();
+        await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
+    }
     [Test]
     public async Task QA_AYD_NavegacionAcordeonVentas()
     {

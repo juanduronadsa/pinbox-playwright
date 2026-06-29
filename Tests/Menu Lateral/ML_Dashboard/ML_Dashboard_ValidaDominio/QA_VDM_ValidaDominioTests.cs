@@ -11,6 +11,12 @@ namespace Playwrigt_Demo.Tests.Menu_Lateral.ML_Dashboard.ML_Dashboard_ValidaDomi
 public class QA_VDM_ValidaDominioTests : BaseTest
 {
     [SetUp]
+    public async Task ConfiguracionInicial()
+    {
+        await LoginDinamico();
+        await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
+    }
+    [SetUp]
     public async Task SetupValidaDominio()
     {
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" }), "Apertura Menú Lateral");

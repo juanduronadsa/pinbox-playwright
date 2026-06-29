@@ -15,12 +15,17 @@ namespace Playwrigt_Demo;
 // SUITE DE PRUEBAS: COTIZADOR MASIVO (Módulo 4.1)
 // ---------------------------------------------------------
 [TestFixture]
-[Ignore("Revisión pendiente: Módulo excluido temporalmente para análisis de reportes.")]
 [Category("Cotizacion")] 
 [Category("Regresion")]  
 [Category("Critica")]  
 public class QA_GST_CotizacionTests : BaseTest
 {
+    [SetUp]
+    public async Task ConfiguracionInicial()
+    {
+        await LoginDinamico();
+        await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
+    }
     // ---------------------------------------------------------
     // HELPERS Y ALIMENTADORES DE DATOS
     // ---------------------------------------------------------

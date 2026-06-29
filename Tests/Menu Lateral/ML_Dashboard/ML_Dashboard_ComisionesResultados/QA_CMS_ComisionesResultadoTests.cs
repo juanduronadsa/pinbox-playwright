@@ -14,6 +14,12 @@ namespace Playwrigt_Demo.Tests.Menu_Lateral.ML_Dashboard.ML_Dashboard_Comisiones
 [Category("Funcional")]
 public class QA_CMS_ComisionesResultadoTests : BaseTest
 {
+    [SetUp]
+    public async Task ConfiguracionInicial()
+    {
+        await LoginDinamico();
+        await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
+    }
     [Test]
     public async Task QA_CMS_IntegridadDatosTodasLasComisiones()
     {

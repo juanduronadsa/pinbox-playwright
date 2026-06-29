@@ -10,13 +10,18 @@ namespace Playwrigt_Demo;
 // SUITE DE PRUEBAS: ALTA DE CLIENTES (Módulo 4.2)
 // ---------------------------------------------------------
 [TestFixture]
-[Ignore("Revisión pendiente: Módulo excluido temporalmente para análisis de reportes.")]
 [Category("Clientes")]   
 [Category("Regresion")]  
 [Category("E2E")]        
 [Category("Alta")]       
 public class QA_GST_ClientesTests : BaseTest
-{
+{    
+    [SetUp]
+    public async Task ConfiguracionInicial()
+    {
+        await LoginDinamico();
+        await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
+    }
     [Test]
     public async Task QA_CLN_01_ValidacionCamposObligatorios()
     {
