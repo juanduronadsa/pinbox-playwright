@@ -10,18 +10,22 @@ namespace Playwrigt_Demo.Tests.Menu_Lateral.ML_Dashboard.ML_Dashboard_ValidaDomi
 [Category("Funcional")]
 public class QA_VDM_ValidaDominioTests : BaseTest
 {
+    // 🚨 FIX: un solo [SetUp] en vez de 2 separados. NUnit no garantiza el orden de ejecución
+    // entre múltiples métodos [SetUp] en la misma clase, y aquí el login DEBE ocurrir antes de
+    // navegar a "Valida dominio".
     [SetUp]
     public async Task ConfiguracionInicial()
     {
         await LoginDinamico();
         await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
-    }
-    [SetUp]
-    public async Task SetupValidaDominio()
-    {
+
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" }), "Apertura Menú Lateral");
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Link, new() { Name = "Valida dominio" }), "Clic en Valida Dominio");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        // 🚨 FIX: NetworkIdle es un anti-patrón documentado por el propio Playwright: si la página
+        // tiene actividad de red en segundo plano (como las APIs lentas de terceros de Pinbox),
+        // nunca se alcanza "idle" y esto se cuelga hasta el timeout de navegación (45s) sin razón
+        // real. En su lugar, esperamos directamente al elemento que vamos a usar a continuación.
+        await Expect(Page.GetByRole(AriaRole.Textbox, new() { Name = "Ejemplo: tudominio.com" })).ToBeVisibleAsync();
     }
 
     // Usamos TestCase para probar múltiples dominios con un solo método

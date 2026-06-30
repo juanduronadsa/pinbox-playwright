@@ -18,7 +18,11 @@ public class QA_AYD_AppPinboxTests : BaseTest
     [Test]
     public async Task QA_AYD_ValidarDescargaAPK()
     {
+        // 🚨 FIX: el menú lateral muestra Gestión por defecto. Sin cambiar a "Ayudas" primero,
+        // "AppPinbox" no aparece en el DOM → ClickConMonitoreo reventa a los 10s exactos.
+        await Page.GetByRole(AriaRole.Radio, new() { Name = "Ayudas" }).CheckAsync();
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" }), "Abrir Menú");
+        await Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Aplicación Android PINBOX" }).Or(Page.GetByTitle("AppPinbox"))).ToBeVisibleAsync(new() { Timeout = 15000 });
         await ClickConMonitoreo(Page.GetByTitle("AppPinbox"), "Clic en App Pinbox");
 
         // Validar intercepción de descarga

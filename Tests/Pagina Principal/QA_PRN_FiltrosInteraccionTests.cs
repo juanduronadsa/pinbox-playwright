@@ -60,7 +60,11 @@ public class QA_PRN_FiltrosInteraccionTests : BaseTest
     [Test]
     public async Task QA_PRN_18_BuscadorVacio()
     {
-        IgnorarCortafuegosAlertas = true;
+        // Esta prueba quiere VER la alerta de "No se encontraron resultados" para afirmarla,
+        // así que removemos solo ese handler puntual. Los otros 2 (Dashboard API lenta y
+        // Sinergias) siguen activos: si la app tiene uno de sus hipos de API lenta durante
+        // esta prueba, se cerrará solo y no bloqueará el flujo por una alerta ajena a esta prueba.
+        await Page.RemoveLocatorHandlerAsync(AlertaCotizadorVacio);
         LogWriter("Ejecutando prueba negativa en el motor de búsqueda principal (Manejo de excepciones visuales).");
         var inputBuscador = Page.GetByPlaceholder("buscar...");
         

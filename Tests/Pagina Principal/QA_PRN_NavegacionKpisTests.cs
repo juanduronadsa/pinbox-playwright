@@ -20,7 +20,11 @@ public class QA_PRN_NavegacionKpisTests : BaseTest
     public async Task SetupDashboard()
     {
         await LoginDinamico();
-        await Expect(Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" })).ToBeVisibleAsync();
+        // 🚨 FIX (Bug #3 — confirmado por codegen): se elimina el Expect redundante de "Open Menu".
+        // LoginDinamico() ya lo verifica internamente con timeout de 15s.
+        // Tenerlo aquí también era peligroso: los AddLocatorHandlerAsync NO se disparan durante
+        // un Expect puro (sin acción previa), así que si un SweetAlert aparecía entre las dos
+        // líneas, el handler nunca lo cerraba y el test se colgaba hasta el timeout de 45s.
     }
 
     public static IEnumerable<TestCaseData> LeerDatosKpisMuestreo()
@@ -53,7 +57,7 @@ public class QA_PRN_NavegacionKpisTests : BaseTest
             await ClickConMonitoreo(selectorKpi, $"Acceso a KPI {datos.CasoId}");
             
             // 🚨 SOLUCIÓN 1: Esperar a que la consulta de base de datos / red termine
-            try { await Page.WaitForLoadStateAsync(LoadState.NetworkIdle, new() { Timeout = 10000 }); } catch { }
+            // FIX: NetworkIdle eliminado — el WaitForAsync del título a continuación ya espera hasta 15s
             
             // 🚨 SOLUCIÓN 2: Búsqueda agnóstica al HTML (sin forzar que sea un span)
             var tituloDestino = Page.GetByText(datos.TituloEsperado).First;
@@ -69,7 +73,7 @@ public class QA_PRN_NavegacionKpisTests : BaseTest
             if (await botonRegresar.IsVisibleAsync())
             {
                 await ClickConMonitoreo(botonRegresar, "Retorno al Dashboard");
-                await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+                await Expect(Page.Locator("#tab-home-1")).ToBeVisibleAsync(); // FIX: confirmar retorno al Dashboard
             }
         }
         catch (System.TimeoutException)

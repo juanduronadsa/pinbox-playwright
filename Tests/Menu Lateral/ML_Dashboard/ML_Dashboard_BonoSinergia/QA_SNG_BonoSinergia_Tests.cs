@@ -25,7 +25,7 @@ public class QA_SNG_BonoSinergia_Tests : BaseTest
         
         // 2. Clic en el módulo afectado
         await ClickConMonitoreo(Page.Locator("a").Filter(new() { HasText = "Bono Sinergia" }).First, "Clic en Bono Sinergia");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        await Expect(Page.GetByRole(AriaRole.Heading).First).ToBeVisibleAsync(); // FIX: NetworkIdle → espera determinista del heading de la pantalla
         
         // 3. Espacio reservado para aserciones futuras cuando el entorno esté funcional
         await Expect(Page.GetByRole(AriaRole.Heading)).ToBeVisibleAsync(); 

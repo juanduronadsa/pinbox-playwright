@@ -39,6 +39,53 @@ public static class ClientePoolFactory
     }
 
     /// <summary>
+    /// Devuelve uno de los agentes ÚNICOS del pool (sin repetir, deduplicado por usuario) de forma
+    /// determinista según el nombre del caso. Pensado para módulos como "Alta de Clientes" que no
+    /// necesitan un cliente aprobado específico, solo distribuir la carga entre varias cuentas
+    /// reales en vez de saturar siempre a la misma (ej. Config.User).
+    /// </summary>
+    public static ClienteAprobadoModel ObtenerAgentePorCaso(string nombreCaso)
+    {
+        if (!_pool.Any()) throw new InvalidOperationException("El pool de clientes está vacío. Verifica QA_GST_ClientesAprobados.json");
+
+        var agentesUnicos = _pool
+            .GroupBy(c => c.UsuarioPropietario)
+            .Select(g => g.First())
+            .OrderBy(c => c.UsuarioPropietario) // orden estable, no depende del orden del JSON
+            .ToList();
+
+        if (string.IsNullOrEmpty(nombreCaso)) return agentesUnicos[0];
+
+        unchecked
+        {
+            int hash = 17;
+            foreach (char c in nombreCaso) hash = hash * 31 + c;
+            int indice = Math.Abs(hash) % agentesUnicos.Count;
+            return agentesUnicos[indice];
+        }
+    }
+
+    /// <summary>
+    /// Devuelve siempre el MISMO cliente para el mismo CasoId, sin importar el orden ni si se
+    /// ejecuta la suite completa o un único caso aislado (ej. al reintentar un test que falló).
+    /// A diferencia de ObtenerClienteEnTurno(), esto es 100% reproducible entre corridas.
+    /// </summary>
+    public static ClienteAprobadoModel ObtenerClientePorCaso(string casoId)
+    {
+        if (!_pool.Any()) throw new InvalidOperationException("El pool de clientes está vacío. Verifica QA_GST_ClientesAprobados.json");
+        if (string.IsNullOrEmpty(casoId)) return ObtenerClienteEnTurno();
+
+        // Hash estable (no usamos string.GetHashCode() porque varía entre ejecuciones de .NET)
+        unchecked
+        {
+            int hash = 17;
+            foreach (char c in casoId) hash = hash * 31 + c;
+            int indice = Math.Abs(hash) % _pool.Count;
+            return _pool[indice];
+        }
+    }
+
+    /// <summary>
     /// Devuelve el cliente correspondiente al turno actual garantizando seguridad de memoria concurrente.
     /// </summary>
     public static ClienteAprobadoModel ObtenerClienteEnTurno()

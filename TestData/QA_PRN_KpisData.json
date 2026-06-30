@@ -33,7 +33,8 @@
     "casoId": "QA-PRN-06",
     "boton": "Contratos en fulfillment",
     "tituloEsperado": "Fulfillment",
-    "esId": false
+    "esId": false,
+    "notaAmbiente": "Codegen confirma: el ambiente de pruebas devuelve pantalla vacía para Fulfillment. Bug de ambiente, no de automatización. Candidato a Ticket de reporte."
   },
   {
     "casoId": "QA-PRN-07",

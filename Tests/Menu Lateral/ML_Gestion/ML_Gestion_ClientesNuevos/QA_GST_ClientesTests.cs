@@ -16,17 +16,17 @@ namespace Playwrigt_Demo;
 [Category("Alta")]       
 public class QA_GST_ClientesTests : BaseTest
 {    
-    [SetUp]
-    public async Task ConfiguracionInicial()
-    {
-        await LoginDinamico();
-        await Page.Locator("#tab-home-1").ClickAsync(new() { Force = true });
-    }
+    // 🚨 FIX: se quita el [SetUp] con login genérico (mismo bug de doble-login que en
+    // Cotizaciones: dejaba la sesión ya autenticada cuando el test intentaba loguearse de nuevo).
+    // Además, cada test ahora inicia sesión con un agente DISTINTO del pool (vía
+    // ClientePoolFactory.ObtenerAgentePorCaso) en vez de siempre el mismo usuario genérico,
+    // para no concentrar las ~70 pruebas de Clientes+Cotizaciones en una sola cuenta.
     [Test]
     public async Task QA_CLN_01_ValidacionCamposObligatorios()
     {
         LogWriter("Iniciando QA-CLN-01: Prueba negativa en Alta de Cliente.");
-        await LoginDinamico();
+        var agente = ClientePoolFactory.ObtenerAgentePorCaso("QA_CLN_01");
+        await LoginEspecifico(agente.UsuarioPropietario, agente.PasswordPropietario);
         
         var btnCerrarSinuhe = Page.Locator(".fa.fa-times-circle");
         if (await btnCerrarSinuhe.IsVisibleAsync())
@@ -43,12 +43,16 @@ public class QA_GST_ClientesTests : BaseTest
         LogWriter("Forzando guardado con formulario vacío...");
         await Page.GetByRole(AriaRole.Button, new() { Name = "Crear Cliente" }).ClickAsync();
 
-        // 🚨 ASERCIÓN ROBUSTA CORREGIDA: 
-        // Esperamos 5 segundos a que aparezca cualquier tipo de alerta de error (SweetAlert, texto rojo, etc.)
+        // 🚨 ASERCIÓN ROBUSTA: esperamos un error de VALIDACIÓN DE NEGOCIO específicamente.
+        // OJO: excluimos a propósito los SweetAlert genéricos (.swal2-container) de este chequeo.
+        // Esas alertas (Dashboard lento, Cotizador sin datos, Sinergias sin info) ya las gestionan
+        // los AddLocatorHandlerAsync globales de SetupGlobal, y si las capturamos aquí también,
+        // un falso positivo de "API lenta" haría pasar esta prueba sin validar nada real, y además
+        // dejaría el modal abierto bloqueando el siguiente clic (WaitForAsync no lo cierra).
         bool alertaVisible = true;
         try 
         { 
-            await Page.Locator(".swal2-container, .alert, .text-danger, .error-message, .error").First
+            await Page.Locator(".alert, .text-danger, .error-message, .error").First
                 .WaitForAsync(new() { State = WaitForSelectorState.Visible, Timeout = 5000 }); 
         } 
         catch (System.TimeoutException)
@@ -68,7 +72,8 @@ public class QA_GST_ClientesTests : BaseTest
         var cliente = ClienteFactory.GenerarCliente(personaMoral: false);
         LogWriter($"Iniciando creación de cliente: {cliente.NombreComercial}");
 
-        await LoginDinamico();
+        var agente = ClientePoolFactory.ObtenerAgentePorCaso("QA_CLN_02");
+        await LoginEspecifico(agente.UsuarioPropietario, agente.PasswordPropietario);
         
         var btnCerrarSinuhe = Page.Locator(".fa.fa-times-circle");
         if (await btnCerrarSinuhe.IsVisibleAsync())

@@ -22,7 +22,7 @@ public class QA_TBL_TableroTests : BaseTest
         // Navegación base
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" }), "Apertura Menú Lateral");
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Link, new() { Name = "Tablero" }), "Clic en Tablero");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        await Expect(Page.GetByRole(AriaRole.Button, new() { Name = "Descargar Reporte" })).ToBeVisibleAsync(); // FIX: NetworkIdle → espera determinista
 
         // Prueba de Descarga del Reporte del Tablero
         var download = await Page.RunAndWaitForDownloadAsync(async () =>

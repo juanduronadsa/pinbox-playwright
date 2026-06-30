@@ -21,7 +21,7 @@ public class QA_CFC_CuantoFaltaComisionesTests : BaseTest
     {
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" }), "Apertura Menú Lateral");
         await ClickConMonitoreo(Page.GetByRole(AriaRole.Link, new() { Name = "¿Cuánto falta para mis comisiones por resultados?" }), "Clic en Cuanto Falta");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        await Expect(Page.GetByText("Nota: los contratos ingresados tardan en promedio 3 días hábiles")).ToBeVisibleAsync(); // FIX: NetworkIdle → texto estático de la pantalla
 
         // Validar textos estáticos principales
         await Expect(Page.GetByText("Nota: los contratos ingresados tardan en promedio 3 días hábiles")).ToBeVisibleAsync();

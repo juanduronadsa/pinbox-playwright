@@ -70,7 +70,12 @@ public class GlobalSetup
 public class BaseTest : PageTest
 {
     protected bool ModoAuditoriaRed = false;
-    protected bool IgnorarCortafuegosAlertas = false; 
+    // 🚨 Locators de las 3 alertas conocidas de "API lenta de terceros" (Sección Amarilla).
+    // Expuestos como propiedades para que pruebas específicas puedan desactivar SOLO la que
+    // necesitan inspeccionar (con Page.RemoveLocatorHandlerAsync) sin apagar las otras dos.
+    protected ILocator AlertaDashboardApiLenta => Page.Locator(".swal2-container").Filter(new() { HasText = "seguir navegando en Pinbox" });
+    protected ILocator AlertaSinInformacion => Page.Locator(".swal2-container").Filter(new() { HasText = "no contiene información" });
+    protected ILocator AlertaCotizadorVacio => Page.Locator(".swal2-container").Filter(new() { HasText = "No se encontraron resultados" });
     
     private const int TIMEOUT_LIMITE = 45000;
     protected ConfigData Config;
@@ -152,37 +157,28 @@ public class BaseTest : PageTest
             Sources = true 
         });
 
-await Page.AddLocatorHandlerAsync(
-            Page.Locator(".swal2-container").Filter(new() { HasText = "seguir navegando en Pinbox" }),
+        await Page.AddLocatorHandlerAsync(
+            AlertaDashboardApiLenta,
             async () => {
-                if (IgnorarCortafuegosAlertas) return;
                 LogWriter("[ALERTA] API Lenta. Dando clic real en Continuar navegando...");
-                // 🚨 Clic nativo confiable al botón exacto
                 await Page.GetByRole(AriaRole.Button, new() { Name = "Continuar navegando." }).ClickAsync();
             }
         );
 
         await Page.AddLocatorHandlerAsync(
-            Page.Locator(".swal2-container").Filter(new() { HasText = "no contiene información" }),
+            AlertaSinInformacion,
             async () => {
-                if (IgnorarCortafuegosAlertas) return;
                 LogWriter("[ALERTA] Cliente sin información. Dando clic real en Aceptar...");
-                // 🚨 Clic nativo confiable al botón exacto
                 await Page.GetByRole(AriaRole.Button, new() { Name = "Aceptar" }).ClickAsync();
             }
         );
-        // 🚨 NUEVO: Guardaespaldas para el popup del Cotizador
+        // 🚨 Guardaespaldas para el popup del Cotizador
         await Page.AddLocatorHandlerAsync(
-            Page.Locator(".swal2-container").Filter(new() { HasText = "No se encontraron resultados" }),
+            AlertaCotizadorVacio,
             async () => {
-                if (IgnorarCortafuegosAlertas) return;
                 LogWriter("[ALERTA] Tabla de Cotizador vacía. Dando clic real en OK...");
-                
-                // Hacemos clic en el botón OK que descubriste con tu grabación
                 var btnOk = Page.GetByRole(AriaRole.Button, new() { Name = "OK" });
                 await btnOk.ClickAsync();
-                
-                // Esperamos a que la animación de SweetAlert desaparezca por completo
                 await Page.Locator(".swal2-container").WaitForAsync(new() { State = WaitForSelectorState.Hidden });
             }
         );
